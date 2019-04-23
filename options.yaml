@@ -1,0 +1,106 @@
+general:
+  label: 基本设置
+  items:
+    logo:
+      name: logo
+      label: Logo 展示
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    logo_width:
+      name: logo_width
+      label: Logo 长度
+      type: text
+      default: 40
+    logo_height:
+      name: logo_width
+      label: Logo 宽度
+      type: text
+      default: 40
+    copyright:
+      name: copyright
+      label: 底部版权信息
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    board:
+      name: board
+      label: 站点公告
+      type: textarea
+      default: <p>欢迎交流与分享经验!</p>
+style:
+  label: 样式设置
+  items:
+    skin:
+      name: skin
+      label: 主题颜色
+      type: select
+      options:
+        - value: theme-black
+          label: theme-black
+        - value: theme-blue
+          label: theme-blue
+        - value: theme-green
+          label: theme-green
+        - value: theme-purple
+          label: theme-purple
+    layout:
+      name: layout
+      label: 布局方式
+      type: select
+      default: main-center
+      options:
+        - value: main-center
+          label: main-center
+        - value: main-left
+          label: main-left
+        - value: main-right
+          label: main-right
+    toc:
+      name: toc
+      label: 是否开启文章章节目录导航
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    menu_highlight:
+      name: menu_highlight
+      label: 是否开启当前菜单高亮显示
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    thumbnail:
+      name: thumbnail
+      label: 文章缩略图
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    excerpt_link:
+      name: excerpt_link
+      label: excerpt_link
+      type: text
+      default: Read More
