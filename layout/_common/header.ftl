@@ -22,17 +22,20 @@
     </div>
     <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
       <ul class="nav navbar-nav main-nav <%- theme.config.menu_highlight ? 'menu-highlight' : '' %>">
-        <% for (var i in theme.menu){ %>
-        <% var itemName = i.toLowerCase(); %>
-        <li class="menu-item menu-item-<%= itemName %>">
-          <a href="<%- url_for(theme.menu[i]) %>">
-            <% if(theme.menu_icons.enable) { %>
-            <i class="icon <%= theme.menu_icons[itemName] %>"></i>
-            <% } %>
-            <span class="menu-title"><%= __('menu.'+i) %></span>
-          </a>
-        </li>
-        <% } %>
+        <@menuTag method="list">
+            <#if menus?? && menus?size gt 0>
+                <#list menus as menu>
+                  <li class="menu-item menu-item-<%= itemName %>">
+                    <a href="${menu.url!}">
+<#--                      <% if(theme.menu_icons.enable) { %>-->
+<#--                      <i class="icon <%= theme.menu_icons[itemName] %>"></i>-->
+<#--                      <% } %>-->
+                      <span class="menu-title">${menu.name!}</span>
+                    </a>
+                  </li>
+                </#list>
+            </#if>
+        </@menuTag>
       </ul>
       <%- partial('_common/social', null, {cache: !config.relative_link}) %>
     </nav>

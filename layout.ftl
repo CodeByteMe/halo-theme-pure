@@ -2,7 +2,7 @@
 <#include "/common/macro/common_macro.ftl">
 <!DOCTYPE html>
 <html lang="zh">
-<%- partial('_common/head', {post: page}) %>
+<#include "layout/_common/head.ftl">
 <% 
 	var bodyClass = 'main-center'; 
 	if (theme.config.layout) {

@@ -1,6 +1,6 @@
 <script src="//cdnjs.loli.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+window.jQuery || document.write('<script src="${theme.folderName}/source/js/jquery.min.js"><\/script>')
 </script>
 <%- js('js/plugin.min') %>
 <%- js('js/application') %>

@@ -45,7 +45,10 @@ style:
       name: skin
       label: 主题颜色
       type: select
+      default: theme-default
       options:
+        - value: theme-default
+          label: theme-default
         - value: theme-black
           label: theme-black
         - value: theme-blue

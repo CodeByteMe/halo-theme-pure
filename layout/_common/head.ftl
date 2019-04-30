@@ -45,20 +45,20 @@
   <!-- Canonical links -->
   <link rel="canonical" href="<%- url %>">
   <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="${options.blog_url}" type="application/atom+xml">
   <% } %>
   <@verification></@verification>
   <@favicon></@favicon>
-  <link rel="stylesheet" href="/${themeName}/source/css/style.css">
+  <link rel="stylesheet" href="/${theme.folderName}/source/css/style.css">
   <% if (page.mathjax) { %>
     <link href="//cdnjs.loli.net/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet">
   <% } %>
   <% if (theme.comment.type === 'gitment' && !is_home() && !is_category() && !is_tag() && !is_archive() && post.comments) { %>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css">
   <% } %>
-  <% if (theme.fancybox) { %>
+  <#if settings.fancybox!true>
     <link href="//cdnjs.loli.net/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
-  <% } %>
+  </#if>
   <% if (theme.comment.type === 'gitalk') { %>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   <% } %>

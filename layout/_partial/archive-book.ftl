@@ -1,6 +1,6 @@
 <article class="article article-links article-type-list" itemscope="">
   <header class="article-header">
-    <h1 itemprop="title"><%= page.title %></h1>
+    <h1 itemprop="title">${post.title!}</h1>
     <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/<%= theme.douban.user %>/" target="_blank">[我的豆瓣]</a></p>
     <nav role="navigation" id="nav-main" class="okayNav">
       <ul id="tabs">

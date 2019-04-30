@@ -1,7 +1,7 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 	<%- partial('_common/social', null, {cache: !config.relative_link}) %>
     <div class="copyright">
-        <#if options.copyright!true>
+        <#if settings.copyright!true>
         &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
         </#if>
         <div class="publishby">
