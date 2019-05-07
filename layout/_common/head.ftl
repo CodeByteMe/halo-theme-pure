@@ -45,7 +45,7 @@
   <!-- Canonical links -->
   <link rel="canonical" href="<%- url %>">
   <% if (theme.rss){ %>
-    <link rel="alternate" href="/atom.xml" title="${options.blog_url}" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="${options.blog_url!}" type="application/atom+xml">
   <% } %>
   <@verification></@verification>
   <@favicon></@favicon>
