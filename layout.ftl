@@ -13,7 +13,7 @@
   }
 	bodyClass = page.sidebar === 'none' ? (bodyClass + ' no-sidebar') : bodyClass;
 %>
-<body class="<%= bodyClass %>" itemscope itemtype="http://schema.org/WebPage">
+<body class="${settings.layout!'main-center'} ${settings.skin!}" itemscope itemtype="http://schema.org/WebPage">
   <%- partial('_common/header', null, {cache: !config.relative_link}) %>
   <% if (theme.sidebar && (page.sidebar!='none' || page.sidebar!='custom')){ %>
     <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>

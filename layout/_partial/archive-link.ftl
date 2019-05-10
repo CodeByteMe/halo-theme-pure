@@ -1,6 +1,6 @@
 <article class="article article-links article-type-list" itemscope="">
   <header class="article-header">
-    <h1 itemprop="title">${post.title!}</h1>
+    <h1 itemprop="title">${sheet.title!}</h1>
     <p class="text-muted">
       欢迎交换链接，可在当前页面留言
     </p>

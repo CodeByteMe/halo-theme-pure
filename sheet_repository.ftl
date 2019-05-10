@@ -1,6 +1,6 @@
 <#include "layout.ftl">
 <@layout></@layout>
 <main class="main" role="main">
-  <%- partial('_partial/archive-repository', {post: page}) %>
+    <#include "layout/_partial/archive-repository.ftl">
 </main>
 <@footer></@footer>

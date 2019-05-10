@@ -1,6 +1,6 @@
 <article class="article article-repository article-type-list" itemscope="">
   <header class="article-header">
-    <h1 itemprop="title">${post.title}</h1>
+    <h1 itemprop="title">${sheet.title!}</h1>
     <p class="text-muted">I have <span id="repo-count">0</span> projects on Github</p>
   </header>
   <div class="article-body">
