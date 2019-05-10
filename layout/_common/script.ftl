@@ -11,9 +11,6 @@ window.jQuery || document.write('<script src="${theme.folderName}/source/js/jque
 <% if (page.layout === 'books'){ %>
    <#include "../_script/douban.ftl">
 <% } %>
-<% if (is_home() || is_post()) { %>
-   <#include "../_script/pv.ftl">
-<% } %>
 <% if (!is_home() && !is_category() && !is_tag() && !is_archive() && post.comments) { %>
    <#include "../_script/comment.ftl">
 <% } %>

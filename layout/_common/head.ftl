@@ -15,9 +15,6 @@
   <meta name="theme-color" content="#000000" />
   <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
   <meta http-equiv="window-target" content="_top" />
-  <% if (theme.plugins.google_site_verification) { %>
-  <meta name="google-site-verification" content="<%= theme.plugins.google_site_verification %>" />
-  <% } %>
   <%
   var title = page.title;
 
@@ -53,13 +50,7 @@
   <% if (page.mathjax) { %>
     <link href="//cdnjs.loli.net/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet">
   <% } %>
-  <% if (theme.comment.type === 'gitment' && !is_home() && !is_category() && !is_tag() && !is_archive() && post.comments) { %>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css">
-  <% } %>
   <#if settings.fancybox!true>
     <link href="//cdnjs.loli.net/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
   </#if>
-  <% if (theme.comment.type === 'gitalk') { %>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
-  <% } %>
 </head>

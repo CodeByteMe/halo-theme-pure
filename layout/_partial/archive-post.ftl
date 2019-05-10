@@ -12,6 +12,5 @@
     <#include "post/category.ftl">
     <#include "post/tag.ftl">
     <span class="post-comment"><i class="icon icon-comment"></i> <a href="<%- url_for(post.path) %>#comments" class="article-comment-link">评论</a></span>
-    <#include "post/wordcount.ftl">
   </p>
 </article>

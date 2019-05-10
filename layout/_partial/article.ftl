@@ -9,9 +9,7 @@
         <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
         <#include "post/category.ftl">
         <#include "post/tag.ftl">
-        <#include "post/pv.ftl">
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="<%- url_for(post.path) %>#comments" class="article-comment-link">评论</a></span>
-        <#include "post/wordcount.ftl">
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
