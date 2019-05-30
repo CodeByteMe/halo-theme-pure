@@ -46,7 +46,7 @@
   <% } %>
   <@verification></@verification>
   <@favicon></@favicon>
-  <link rel="stylesheet" href="/${static!}/source/css/style.css">
+  <link rel="stylesheet" href="${static!}/source/css/style.css">
   <% if (page.mathjax) { %>
     <link href="//cdnjs.loli.net/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet">
   <% } %>
