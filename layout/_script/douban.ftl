@@ -50,13 +50,13 @@ function show(id) {
   function loadDoubanCollections() {
     var _this = this;
     // https://api.douban.com/v2/book/user/:name/collections?start=0&count=100
-    var url = "https://api.douban.com/v2/book/user/<%= theme.douban.user %>/collections"
+    var url = "https://api.douban.com/v2/book/user/${settings.douban_user!}/collections"
     $.ajax({
       url: url,
       type: 'GET',
       data: {
-        start:<%= theme.douban.start %>, // 从哪一条记录开始
-        count:<%= theme.douban.count %> // 获取豆瓣书单数据条数
+        start:${settings.douban_start!}, // 从哪一条记录开始
+        count:${settings.douban_count!} // 获取豆瓣书单数据条数
       },
       dataType: 'JSONP', //here
       success: function(data) {

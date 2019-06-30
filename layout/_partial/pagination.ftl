@@ -1,5 +1,5 @@
 <% if (page.total > 1){ %>
-    <% if (theme.pagination.number){ %>
+    <#if settings.pagination_number!false>
     <nav class="bar bar-footer clearfix" data-stick-bottom>
         <div class="bar-inner">
         <div class="pager pull-left">
@@ -17,7 +17,7 @@
         <div class="total-article bar-right"><%= _p('pagination.pageof', page.current, page.total) %></div>
         </div>
     </nav>
-    <% } else { %>
+    <#else>
     <nav class="bar bar-footer clearfix" data-stick-bottom>
         <div class="bar-inner">
         <ul class="pager pull-left">
@@ -55,5 +55,5 @@
         <div class="total-article bar-right"><%= _p('pagination.pageof', page.current, page.total) %></div>
         </div>
     </nav>
-    <% } %>
+    </#if>
 <% } %>

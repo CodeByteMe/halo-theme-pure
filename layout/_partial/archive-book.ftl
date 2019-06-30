@@ -1,7 +1,7 @@
 <article class="article article-links article-type-list" itemscope="">
   <header class="article-header">
     <h1 itemprop="title">${sheet.title!}</h1>
-    <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/<%= theme.douban.user %>/" target="_blank">[我的豆瓣]</a></p>
+    <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/${settings.douban_user!}/" target="_blank">[我的豆瓣]</a></p>
     <nav role="navigation" id="nav-main" class="okayNav">
       <ul id="tabs">
         <li><a id="reading-tab" href="javascript:show('reading')" rel="external">在读<span id="reading-total"></span></a></li>
@@ -29,6 +29,5 @@
     </div>
   </div>
 </article>
-<% if (theme.comment.type && !is_home()) { %>
-  <%- partial('post/comment', {post: page}) %>
-<% } %>
+<#include "post/comment.ftl">
+<@comment post=sheet type="sheet" />

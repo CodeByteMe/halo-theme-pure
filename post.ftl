@@ -1,7 +1,7 @@
 <#include "layout.ftl">
-<@layout></@layout>
-<%- partial('_partial/sidebar-toc', {post: page, index: false}) %>
+<@layout layout="post" title="${post.title!} | ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${post.summary!}" canonical="${context!}/archives/${post.url!}"></@layout>
+<#include "layout/_partial/sidebar-toc.ftl">
 <main class="main" role="main">
-  <%- partial('_partial/article', {post: page, index: false}) %>
+  <#include "layout/_partial/article.ftl">
 </main>
-<@footer></@footer>
+<@footer layout="post"></@footer>

@@ -11,7 +11,7 @@ var open = function() {
     var errorContainer = repoContainer.find(".blankslate");
     var countContainer = $("#repo-count");
 
-    $.get("https://api.github.com/users/<%=theme.github.username%>/repos", function(result) {
+    $.get("https://api.github.com/users/${settings.github_username!}/repos", function(result) {
       if (result) {
         errorContainer.remove();
         countContainer.text(result.length); //设置项目个数

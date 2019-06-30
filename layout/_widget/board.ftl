@@ -3,7 +3,7 @@
     <div class="widget-body">
         <div id="board">
             <div class="content">
-                <%- theme.site.board %>
+                ${settings.board!}
             </div>
         </div>
     </div>

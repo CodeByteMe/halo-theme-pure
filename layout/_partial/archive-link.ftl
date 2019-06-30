@@ -1,8 +1,13 @@
 <article class="article article-links article-type-list" itemscope="">
   <header class="article-header">
-    <h1 itemprop="title">${sheet.title!}</h1>
+    <h1 itemprop="title">
+      <#if is_sheet??>
+        ${sheet.title!}
+        <#else>
+        友情链接
+      </#if>
+    </h1>
     <p class="text-muted">
-      欢迎交换链接，可在当前页面留言
     </p>
   </header>
   <div class="article-body">
@@ -33,6 +38,7 @@
     </div>
   </div>
 </article>
-<% if (theme.comment.type && !is_home()) { %>
-  <%- partial('_partial/post/comment', {post: page}) %>
-<% } %>
+<#if is_sheet??>
+  <#include "post/comment.ftl">
+  <@comment post=sheet type="sheet" />
+</#if>

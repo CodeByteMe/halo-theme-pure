@@ -1,17 +1,16 @@
 <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
-      <% if(theme.profile && theme.profile.enabled) { %>
-      <% var profile = theme.profile; %>
+      <#if settings.profile_enabled!true>
       <div class="profile-block text-center">
-        <a id="avatar" href="<%= profile.follow %>" target="_blank">
-          <img class="img-circle img-rotate" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" width="200" height="200">
+        <a id="avatar" href="${settings.profile_follow!}" target="_blank">
+          <img class="img-circle img-rotate" src="${user.avatar!}" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm"><%= profile.author %></h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md"><%= profile.author_title %></h3>
-        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> <%= profile.location %></small>
+        <h2 id="name" class="hidden-xs hidden-sm">${user.nickname!}</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">${user.description!}</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> ${settings.profile_location!}</small>
       </div>
-      <% } %>
+      </#if>
       <#include "../_search/index.ftl">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -27,9 +26,9 @@
                 <#list menus as menu>
                   <li class="menu-item menu-item-<%= itemName %>">
                     <a href="${menu.url!}">
-<#--                      <% if(theme.menu_icons.enable) { %>-->
-<#--                      <i class="icon <%= theme.menu_icons[itemName] %>"></i>-->
-<#--                      <% } %>-->
+                      <#if settings.menu_icons!true>
+                          <i class="icon ${menu.icon!}"></i>
+                      </#if>
                       <span class="menu-title">${menu.name!}</span>
                     </a>
                   </li>
@@ -37,7 +36,7 @@
             </#if>
         </@menuTag>
       </ul>
-      <%- partial('_common/social', null, {cache: !config.relative_link}) %>
+      <#include "social.ftl">
     </nav>
   </div>
 </header>

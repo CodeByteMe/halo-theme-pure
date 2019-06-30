@@ -107,3 +107,236 @@ style:
       label: excerpt_link
       type: text
       default: Read More
+    menu_icons:
+      name: menu_icons
+      label: 是否启用导航菜单图标
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    pagination_number:
+      name: pagination_number
+      label: 分页数码
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    pagination_prev_alwayShow:
+      name: pagination_prev_alwayShow
+      label: 上一页
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    pagination_next_alwayShow:
+      name: pagination_next_alwayShow
+      label: 下一页
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+sidebar:
+  label: 侧边栏
+  items:
+    sidebar:
+      name: sidebar
+      label: 侧边栏位置
+      type: text
+      default: 'right'
+    sidebar_board:
+      name: sidebar_board
+      label: 侧边栏公告
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sidebar_category:
+      name: sidebar_category
+      label: 侧边栏分类
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sidebar_tag:
+      name: sidebar_tag
+      label: 侧边栏标签
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sidebar_tagcloud:
+      name: sidebar_tagcloud
+      label: 侧边栏标签云
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sidebar_archive:
+      name: sidebar_archive
+      label: 侧边栏归档
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    sidebar_recent_posts:
+      name: sidebar_recent_posts
+      label: 侧边栏最近文章
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+other:
+  label: 其他
+  items:
+    fancybox:
+      name: fancybox
+      label: Fancybox 插件
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    donate_enable:
+      name: donate_enable
+      label: 开启打赏
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    donate_wechatpay:
+      name: donate_wechatpay
+      label: 微信二维码链接
+      type: text
+    donate_alipay:
+      name: donate_alipay
+      label: 支付宝二维码链接
+      type: text
+    github_username:
+      name: github_username
+      lable: Github 用户名
+      type: text
+    douban_user:
+      name: douban_user
+      lable: 豆瓣用户名
+      type: text
+    douban_start:
+      name: douban_start
+      lable: douban_start
+      type: text
+      default: '0'
+    douban_count:
+      name: douban_count
+      lable: douban_count
+      type: text
+      default: '100'
+profile:
+  label: 个人资料
+  items:
+    profile_enabled:
+      name: profile_enabled
+      label: profile_enabled
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    profile_author_description:
+      name: profile_author_description
+      label: 个人简介
+      type: text
+    profile_location:
+      name: profile_location
+      label: 地理位置
+      type: text
+    profile_follow:
+      name: profile_follow
+      label: profile_follow
+      type: text
+    profile_social_github:
+      name: profile_social_github
+      label: profile_social_github
+      type: text
+    profile_social_weibo:
+      name: profile_social_weibo
+      label: profile_social_weibo
+      type: text
+    profile_social_twitter:
+      name: profile_social_twitter
+      label: profile_social_twitter
+      type: text
+    profile_social_behance:
+      name: profile_social_behance
+      label: profile_social_behance
+      type: text
+    profile_social_rss:
+      name: profile_social_rss
+      label: profile_social_rss
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    profile_tooltip:
+      name: profile_tooltip
+      label: profile_tooltip
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭

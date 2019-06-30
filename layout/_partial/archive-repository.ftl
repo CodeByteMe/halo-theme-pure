@@ -11,10 +11,8 @@
     </div>
   </div>
 </article>
-<% if (theme.comment.type && !is_home()) { %>
-  <%- partial('post/comment', {post: page}) %>
-<% } %>
-
+<#include "post/comment.ftl">
+<@comment post=sheet type="sheet" />
 <!--Github项模版-->
 <script type="text/template" id="list-template">
   <li class="col-sm-6 col-md-6 col-lg-4">

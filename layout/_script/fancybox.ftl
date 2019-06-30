@@ -1,4 +1,4 @@
-<% if (theme.fancybox) { %>
+<#if settings.fancybox!false>
   <script src="//cdnjs.loli.net/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
   <script>
   //利用 FancyBox 实现点击图片放大
@@ -27,4 +27,4 @@
     });
   });
   </script>
-<% } %>
+</#if>
