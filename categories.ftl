@@ -1,5 +1,5 @@
 <#include "layout.ftl">
-<@layout></@layout>
+<@layout layout="categories" title="分类 | ${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/categories"></@layout>
 <main class="main" role="main">
   <article class="article article-categories article-type-list" itemscope="">
     <header class="article-header">
@@ -41,4 +41,4 @@
     </div>
   </article>
 </main>
-<@footer></@footer>
+<@footer layout="categories"></@footer>

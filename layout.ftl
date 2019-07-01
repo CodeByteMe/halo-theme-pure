@@ -25,52 +25,39 @@
         <link rel="alternate" href="/atom.xml" title="${options.blog_title!}" type="application/atom+xml">
         <@common.globalHeader />
         <link rel="stylesheet" href="${static!}/source/css/style.css">
-<#--        <% if (page.mathjax) { %>-->
+        <#if is_post?? || is_sheet??>
         <link href="//cdnjs.loli.net/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet">
-<#--        <% } %>-->
+        </#if>
         <#if settings.fancybox!true>
             <link href="//cdnjs.loli.net/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
         </#if>
     </head>
-<#--<% -->
-<#--	var bodyClass = 'main-center'; -->
-<#--	if (theme.config.layout) {-->
-<#--		bodyClass = theme.config.layout;-->
-<#--	}-->
-<#--  if (theme.config.skin) {-->
-<#--    bodyClass += ' ' + theme.config.skin;-->
-<#--  }-->
-<#--	bodyClass = page.sidebar === 'none' ? (bodyClass + ' no-sidebar') : bodyClass;-->
-<#--%>-->
-<body class="${settings.layout!'main-center'} ${settings.skin!}" itemscope itemtype="http://schema.org/WebPage">
-    <#include "layout/_common/header.ftl">
-<#--  <% if (theme.sidebar && (page.sidebar!='none' || page.sidebar!='custom')){ %>-->
-<#--    <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>-->
-<#--  <% } %>-->
-    <#if settings.sidebar??>
-        <#include "layout/_partial/sidebar.ftl">
-    </#if>
-</#macro>
+    <body class="${settings.layout!'main-center'} ${settings.skin!} <#if layout=='repository' || layout=='books' || layout=='links'>no-sidebar</#if>" itemscope itemtype="http://schema.org/WebPage">
+        <#include "layout/_common/header.ftl">
+        <#if layout!='repository' || layout!='books' || layout!='links'>
+            <#include "layout/_partial/sidebar.ftl">
+        </#if>
+    </#macro>
 
-<#--<%- body %>-->
-    
-<#macro footer layout>
-    <#include "layout/_common/footer.ftl">
-    <script src="//cdnjs.loli.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="${static!}/source/js/jquery.min.js"><\/script>')
-    </script>
-    <script src="${static!}/source/js/plugin.min.js"></script>
-    <script src="${static!}/source/js/application.js"></script>
-    <#include "layout/_script/search.ftl">
-    <#if layout == 'repository'>
-        <#include "layout/_script/repository.ftl">
-    </#if>
-    <#if layout == 'books'>
-        <#include "layout/_script/douban.ftl">
-    </#if>
-    <#include "layout/_script/fancybox.ftl">
-    <#include "layout/_script/analytics.ftl">
-</body>
+    <#--<%- body %>-->
+
+    <#macro footer layout>
+        <#include "layout/_common/footer.ftl">
+        <script src="//cdnjs.loli.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="${static!}/source/js/jquery.min.js"><\/script>')
+        </script>
+        <script src="${static!}/source/js/plugin.min.js"></script>
+        <script src="${static!}/source/js/application.js"></script>
+        <#include "layout/_script/search.ftl">
+        <#if layout == 'repository'>
+            <#include "layout/_script/repository.ftl">
+        </#if>
+        <#if layout == 'books'>
+            <#include "layout/_script/douban.ftl">
+        </#if>
+        <#include "layout/_script/fancybox.ftl">
+        <#include "layout/_script/analytics.ftl">
+    </body>
 </html>
 </#macro>

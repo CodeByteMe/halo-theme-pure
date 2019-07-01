@@ -1,5 +1,5 @@
 <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-    <#include "social.ftl">
+<#--    <#include "social.ftl">-->
     <div class="copyright">
         <#if settings.copyright!true>
         &copy; ${.now?string('yyyy')} ${options.blog_title!}

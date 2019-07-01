@@ -36,7 +36,7 @@
             </#if>
         </@menuTag>
       </ul>
-      <#include "social.ftl">
+<#--      <#include "social.ftl">-->
     </nav>
   </div>
 </header>

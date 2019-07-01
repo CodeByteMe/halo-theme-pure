@@ -154,11 +154,6 @@ style:
 sidebar:
   label: 侧边栏
   items:
-    sidebar:
-      name: sidebar
-      label: 侧边栏位置
-      type: text
-      default: 'right'
     sidebar_board:
       name: sidebar_board
       label: 侧边栏公告
