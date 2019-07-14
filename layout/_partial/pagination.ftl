@@ -14,7 +14,7 @@
             <a class="next disabled" href="javascript:;">下一页 <i class="icon icon-angle-right"></i></a>
             </#if>
         </div>
-        <div class="total-article bar-right"><%= _p('pagination.pageof', page.current, page.total) %>Page %d of %s</div>
+        <div class="total-article bar-right">Page ${posts.number+1} of ${posts.totalPages!}</div>
         </div>
     </nav>
     <#else>
@@ -29,12 +29,21 @@
                 </a>
             </li>
             <#else>
-            <li class="prev">
-                <a href="<%- url_for(page.prev_link) %>">
-                    <i class="icon icon-angle-left"></i>
-                    上一页
-                </a>
-            </li>
+                <#if posts.number == 1>
+                    <li class="prev">
+                        <a href="${context!}">
+                            <i class="icon icon-angle-left"></i>
+                            上一页
+                        </a>
+                    </li>
+                    <#else>
+                    <li class="prev">
+                        <a href="${context!}/page/${posts.number}">
+                            <i class="icon icon-angle-left"></i>
+                            上一页
+                        </a>
+                    </li>
+                </#if>
             </#if>
             <#if !posts.hasNext() && settings.pagination_next_alwayShow!true>
             <li class="next disabled">
@@ -45,7 +54,7 @@
             </li>
             <#else>
             <li class="next">
-                <a href="<%- url_for(page.next_link) %>">
+                <a href="${context!}/page/${posts.number+2}">
                     下一页
                     <i class="icon icon-angle-right"></i>
                 </a>

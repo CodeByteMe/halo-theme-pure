@@ -1,4 +1,4 @@
-<% if (theme.donate.enable){ %>
+<#if settings.donate_enable!false>
 <!-- Modal -->
 <div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -12,14 +12,14 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade active in" id="alipay">
               <div class="donate-payimg">
-                <img src="<%- url_for(theme.donate.alipay.qrcode) %>" alt="扫码支持" title="扫一扫" />
+                <img src="${settings.donate_alipay!}" alt="扫码支持" title="扫一扫" />
               </div>
               <p class="text-muted mv">扫码打赏，你说多少就多少</p>
               <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="wechatpay">
               <div class="donate-payimg">
-                <img src="<%- url_for(theme.donate.wechatpay.qrcode) %>" alt="扫码支持" title="扫一扫" />
+                <img src="${settings.donate_wechatpay!}" alt="扫码支持" title="扫一扫" />
               </div>
               <p class="text-muted mv">扫码打赏，你说多少就多少</p>
               <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
@@ -40,4 +40,4 @@
     </div>
   </div>
 </div>
-<% } %>
+</#if>

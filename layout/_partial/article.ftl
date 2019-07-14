@@ -55,7 +55,7 @@
     <@comment post=post type="post" />
   </#if>
 </div>
-<% if (!index){ %>
+<#if !is_index??>
   <#include "post/nav.ftl">
   <#include "post/donate.ftl">
-<% } %>
+</#if>
